@@ -5,7 +5,7 @@ function conectar(){
 
     conn.onopen = function(e) {
         console.log('Conectado no chat!');
-        $('#conteudo-chat-mesa').load(' #conteudo-chat-mesa');
+        //$('#conteudo-chat-mesa').load(' #conteudo-chat-mesa');
     };
 
     conn.onclose = function(e) {
@@ -17,7 +17,7 @@ function conectar(){
     conn.onmessage = function(e) {
         // showMsg(e.data);
         // $("#conteudo-chat-mesa").load(' #conteudo-chat-mesa');
-        $('#conteudo-chat-mesa').load(' #conteudo-chat-mesa');
+        //$('#conteudo-chat-mesa').load(' #conteudo-chat-mesa');
     };
 
     conn.onerror = function(err) {
@@ -25,22 +25,22 @@ function conectar(){
     };
 };
 
-function showMsg (data) {
-    var how = info_room;
-    console.log('master = ', how);
-    data = JSON.parse(data);
-    var chat_content = document.getElementById('conteudo-chat-mesa');
-    if (data.nome == how){
-        var str_msg = '<span style="color: red;">'+ data.nome + ': </span>' + data.msg + '</span>';
-    }else{
-        var str_msg = '<span style="color: green;">'+ data.nome + ': </span>' + data.msg + '</span>';
-    }
-    var p = document.createElement('p');
-    p.innerHTML = str_msg;
-    chat_content.appendChild(p);
-    var sh = chat_content.scrollHeight;
-    chat_content.scrollTo(0,sh);
-};
+// function showMsg (data) {
+//     var how = info_room;
+//     console.log('master = ', how);
+//     data = JSON.parse(data);
+//     var chat_content = document.getElementById('conteudo-chat-mesa');
+//     if (data.nome == how){
+//         var str_msg = '<span style="color: red;">'+ data.nome + ': </span>' + data.msg + '</span>';
+//     }else{
+//         var str_msg = '<span style="color: green;">'+ data.nome + ': </span>' + data.msg + '</span>';
+//     }
+//     var p = document.createElement('p');
+//     p.innerHTML = str_msg;
+//     chat_content.appendChild(p);
+//     var sh = chat_content.scrollHeight;
+//     chat_content.scrollTo(0,sh);
+// };
 
 conectar();
 
