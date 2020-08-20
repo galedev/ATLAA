@@ -9,17 +9,13 @@ function conectar(){
     };
 
     conn.onclose = function(e) {
-        console.log('Desconectado do chat, reconectando em 1 segundo... ');
         setTimeout(function() {
             conectar();
           }, 1000);
-        
     };
 
     conn.onmessage = function(e) {
-        console.log('msg enviada');
         showMsg(e.data);
-        
     };
 
     conn.onerror = function(err) {

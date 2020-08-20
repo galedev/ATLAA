@@ -17,7 +17,7 @@ $cmnickname = $_SESSION['nickname'];
 $id_room = $_GET['id'];
 $room_info = $u->getRoomInfo($id_room);
 $_SESSION['id_sala_atual'] = $id_room;
-$msg_mesa = $u->getMsgMesa($id_room);
+// $msg_mesa = $u->getMsgMesa($id_room);
 ?>
 <html lang="pt-br">
 <head><meta charset="utf-8">
