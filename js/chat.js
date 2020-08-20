@@ -5,7 +5,7 @@ function conectar(){
 
     conn.onopen = function(e) {
         console.log('Conectado no chat!');
-        //$('#conteudo-chat-mesa').load(' #conteudo-chat-mesa');
+        $('#conteudo-chat-mesa').load(' #conteudo-chat-mesa');
     };
 
     conn.onclose = function(e) {
