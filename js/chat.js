@@ -2,23 +2,31 @@ var conn = new WebSocket('wss://atlaa.herokuapp.com/wss');
 
 conn.onopen = function(e) {
     console.log('Conectado no chat!');
+    console.log(e);
+    console.log(e.data);
 };
 
 conn.onclose = function(e) {
-    conn = new WebSocket('wss://atlaa.herokuapp.com/wss');
+    console.log('Desconectado do chat!')
 };
 
 conn.onmessage = function(e) {
-    // var msg = document.getElementById('conteudo-chat-mesa');
-    // msg.innerHTML = msg.innerHTML + e.data + '\n';
-    // msg.innerHTML = msg.innerHTML + '<p><span style="color: red;">'+ e.data.nome + ': </span>' + e.data.msg + '</span></p>';
     showMsg(e.data);
 };
+
+function showMsg (data) {
+    data = JSON.parse(data);
+    var chat_content = document.getElementById('conteudo-chat-mesa');
+    var str_msg = '<p><span style="color: red;">'+ data.nome + ': </span>' + data.msg + '</span></p>';
+    // chat_content.innerHTML += str_msg;
+    chat_content.appendChild(str_msg);
+}
 
 $('#form-chat-mesa').submit(function(event){
     event.preventDefault();
     var user = $('#cmnickname');
     var msg = $('#cmmsg');
+    var dados = {'nome': user.val(), 'msg': msg.val()};
 
     if (user.val() == '') {
         alert('usuario nao informado!');
@@ -29,15 +37,7 @@ $('#form-chat-mesa').submit(function(event){
         return false;
     }
 
-    var dados = {'nome': user.val(), 'msg': msg.val()};
     dados = JSON.stringify(dados);
     conn.send(dados);
     $('#form-chat-mesa').trigger('reset');
 });
-
-function showMsg (data) {
-    data = JSON.parse(data);
-    var chat_content = document.getElementById('conteudo-chat-mesa');
-    var str_msg = '<p><span style="color: red;">'+ data.nome + ': </span>' + data.msg + '</span></p>';
-    chat_content.innerHTML = chat_content.innerHTML + str_msg;
-}

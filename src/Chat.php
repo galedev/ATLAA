@@ -13,8 +13,8 @@ class Chat implements MessageComponentInterface {
     public function onOpen(ConnectionInterface $conn) {
         // Store the new connection to send messages to later
         $this->clients->attach($conn);
-
-        //echo "New connection! ({$conn->resourceId})\n";
+        echo "Nova Conexao! ({$conn->resourceId})\n";
+        echo $conn;
     }
 
     public function onMessage(ConnectionInterface $from, $msg) {
@@ -22,10 +22,11 @@ class Chat implements MessageComponentInterface {
         // echo "Connection {$from->resourceId} sending message {$msg} to {$numRecv} connection";
 
         foreach ($this->clients as $client) {
-            if ($from !== $client) {
-                // The sender is not the receiver, send to each client connected
-                $client->send($msg);
-            }
+            // if ($from !== $client) {
+            //     // The sender is not the receiver, send to each client connected
+            //     $client->send($msg);
+            // }
+            $client->send($msg);
         }
     }
 
