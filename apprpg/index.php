@@ -5,6 +5,10 @@ if(!isset($_SESSION['nickname']))
     header("Location: ../index.php");
     exit;
 }
+if (isset($_SESSION['id_sala_atual']))
+{
+    unset($_SESSION['id_sala_atual']);
+}
 require_once '../CLASSES/usuarios.php';
 require_once '../options/bd.php';
 $u = new Usuario;

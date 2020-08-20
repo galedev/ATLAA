@@ -16,6 +16,7 @@ $img = "<img src='../imgperfil/".$imgName."' style='border-radius: 50%; border: 
 $cmnickname = $_SESSION['nickname'];
 $id_room = $_GET['id'];
 $room_info = $u->getRoomInfo($id_room);
+$_SESSION['id_sala_atual'] = $id_room;
 ?>
 <html lang="pt-br">
 <head><meta charset="utf-8">

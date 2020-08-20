@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION['id_sala_atual']))
+{
+    unset($_SESSION['id_sala_atual']);
+}
+?>
 <html lang="pt-br">
 <head><meta charset="utf-8">
     

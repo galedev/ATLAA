@@ -5,6 +5,16 @@ function conectar(){
 
     conn.onopen = function(e) {
         console.log('Conectado no chat!');
+        $.ajax({
+            type: 'post',
+            url: 'getMsgMesa.php',
+            success: function(i){
+                console.log(i);
+            },
+            erro: function(){
+                alert('Erro inesperado');
+            }
+        });
     };
 
     conn.onclose = function(e) {
