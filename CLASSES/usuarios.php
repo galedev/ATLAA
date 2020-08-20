@@ -389,5 +389,19 @@
                 return false;
             }
         }
+
+        public function getMsgMesa($id)
+        {
+            global $pdo;
+            $sql = $pdo->prepare("SELECT * FROM msg_mesa WHERE id_sala = :i");
+            $sql->bindValue(":i", $id);
+            $sql->execute();
+            if($sql->rowCount()>0){
+                return $sql->fetchAll();
+                //$result = "<p><span style='color: red;'>".$info[$i][2].": </span>".$info[$i][3]."</span></p>";
+            }else{
+                return false;
+            }
+        }
     }
 ?>

@@ -17,6 +17,7 @@ $cmnickname = $_SESSION['nickname'];
 $id_room = $_GET['id'];
 $room_info = $u->getRoomInfo($id_room);
 $_SESSION['id_sala_atual'] = $id_room;
+$msg_mesa = $u->getMsgMesa($id_room);
 ?>
 <html lang="pt-br">
 <head><meta charset="utf-8">
@@ -31,8 +32,7 @@ $_SESSION['id_sala_atual'] = $id_room;
     <?php include "inc/home_play.html";?>
     <?php include "../inc/footer.html";?>
     <!-- Incluides Modal -->
-    <?php
-    include "../inc/uploadimg.html";?>
+    <?php include "../inc/uploadimg.html";?>
 	<!-- Scripts -->
     <script src="../js/jquery-3.5.1.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
