@@ -14,19 +14,18 @@ class Chat implements MessageComponentInterface {
         // Store the new connection to send messages to later
         $this->clients->attach($conn);
 
-        echo "New connection! ({$conn->resourceId})\n";
+        //echo "New connection! ({$conn->resourceId})\n";
     }
 
     public function onMessage(ConnectionInterface $from, $msg) {
-        $numRecv = count($this->clients) - 1;
-
-        echo "Connection {$from->resourceId} sending message {$msg} to {$numRecv} connection";
+        // $numRecv = count($this->clients) - 1;
+        // echo "Connection {$from->resourceId} sending message {$msg} to {$numRecv} connection";
 
         foreach ($this->clients as $client) {
-           // if ($from !== $client) {
+            if ($from !== $client) {
                 // The sender is not the receiver, send to each client connected
                 $client->send($msg);
-           //}
+            }
         }
     }
 
