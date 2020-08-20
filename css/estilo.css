@@ -21,19 +21,17 @@ textarea.form-control {
 }
 
 div.chat.chat-mesa {
-    height: 500px;
-    resize: none;
     background-color: rgba(255, 255, 255, 0);
+    height: 500px;
     border: none;
-    pointer-events: none;
+    overflow-y: auto;
 }
 
 div.chat.chat-geral {
-    height: 500px;
-    resize: none;
     background-color: rgba(255, 255, 255, 0);
+    height: 500px;
     border: none;
-    pointer-events: none;
+    overflow-y: auto;
 }
 
 textarea.chat {
