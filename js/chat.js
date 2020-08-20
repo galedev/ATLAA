@@ -15,7 +15,8 @@ function conectar(){
     };
 
     conn.onmessage = function(e) {
-        showMsg(e.data);
+        // showMsg(e.data);
+        $("#conteudo-chat-mesa").load(' #conteudo-chat-mesa');
     };
 
     conn.onerror = function(err) {
