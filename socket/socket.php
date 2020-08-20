@@ -10,6 +10,6 @@ $server = IoServer::factory(
             new Chat()
         )
     ),
-    8888
+    80
 );
 $server->run();
