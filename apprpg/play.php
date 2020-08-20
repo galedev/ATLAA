@@ -17,6 +17,7 @@ $allroom = $u->getAllRoom();
 $favroom = $u->getFavRoom($_SESSION['nickname']);
 $img = "<img src='../imgperfil/".$imgName."' style='border-radius: 50%; border: 3px solid white;' class='img-fluid' width='40' height='40' alt='Img de Perfil'>";
 $cmnickname = $_SESSION['nickname'];
+$id_da_sala_atual = $_GET['id'];
 ?>
 <html lang="pt-br">
 <head><meta charset="utf-8">
