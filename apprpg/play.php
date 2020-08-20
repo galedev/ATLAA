@@ -12,12 +12,10 @@ $u->conectar($dbname,$host,$dbuser,$dbpass);
 $result = $u->qtdeCreditos($_SESSION['nickname']);
 $imgName = $u->imgPerfil($_SESSION['nickname']);
 $infoUser = $u->getInfoUser($_SESSION['nickname']);
-$myroom = $u->getMyRoom($_SESSION['nickname']);
-$allroom = $u->getAllRoom();
-$favroom = $u->getFavRoom($_SESSION['nickname']);
 $img = "<img src='../imgperfil/".$imgName."' style='border-radius: 50%; border: 3px solid white;' class='img-fluid' width='40' height='40' alt='Img de Perfil'>";
 $cmnickname = $_SESSION['nickname'];
-$id_da_sala_atual = $_GET['id'];
+$id_room = $_GET['id'];
+$room_info = $u->getRoomInfo($id_room);
 ?>
 <html lang="pt-br">
 <head><meta charset="utf-8">

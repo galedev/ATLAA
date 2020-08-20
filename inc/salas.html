@@ -13,8 +13,8 @@
                             <p class='card-text'>".$allroom[$i][4]."</p>
                         </div>
                         <div class='card-footer text-center'>
-                            <a href='play.php?id=".$allroom[$i][0]."' class='btn btn-primary'>Entrar na sala</a>
                             <form id='formaddfav".$i."' method='POST' action='../addsalafav.php'>
+                                <a href='play.php?id=".$allroom[$i][0]."' class='btn btn-primary'>Entrar na sala</a>
                                 <button type='submit' class='btn btn-primary btnaddsalafav'>+</button>
                                 <input class='d-none' type='text' name='idDaSala' value='".$allroom[$i][0]."' readonly>
                             </form>

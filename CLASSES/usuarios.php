@@ -374,5 +374,20 @@
                 return false;
             }
         }
+
+        public function getRoomInfo($id)
+        {
+            global $pdo;
+            $sql = $pdo->prepare("SELECT * FROM salas WHERE id = :i");
+            $sql->bindValue(":i", $id);
+            $sql->execute();
+            if ($sql->rowCount()>0){
+                $result = $sql->fetch();
+                return $result;
+            }
+            else {
+                return false;
+            }
+        }
     }
 ?>
