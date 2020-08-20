@@ -4,11 +4,11 @@ function conectar(){
     conn = new WebSocket('wss://atlaa.herokuapp.com/wss');
 
     conn.onopen = function(e) {
-        console.log('Conectado no chat: ', e.target);
+        console.log('Conectado no chat!');
     };
 
     conn.onclose = function(e) {
-        console.log('Desconectado do chat, reconectando em 1 segundo... ', e.reason);
+        console.log('Desconectado do chat, reconectando em 1 segundo... ');
         setTimeout(function() {
             conectar();
           }, 1000);
@@ -16,13 +16,13 @@ function conectar(){
     };
 
     conn.onmessage = function(e) {
-        showMsg(e.data);
         console.log('msg enviada');
+        showMsg(e.data);
         
     };
 
     conn.onerror = function(err) {
-        console.log('erro encontrado no socket, conexão fechada.',err.message);
+        console.log('erro encontrado no socket, conexão fechada.',err);
     };
 };
 
@@ -63,7 +63,6 @@ $('#form-chat-mesa').submit(function(event){
         console.log('Conectado ao chat')
         conn.send(dados);
         $('#form-chat-mesa').trigger('reset');
-        showMsg(dados);
     }else{
         console.log('Deu Pau no seu chat carai')
     }
