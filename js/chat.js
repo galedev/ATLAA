@@ -68,6 +68,7 @@ $('#form-chat-mesa').submit(function(event){
             url: $('#form-chat-mesa').attr('action'),
             data: $('#form-chat-mesa').serialize(),
             success: function(i){
+                console.log(i);
                 conn.send(dados);
                 $('#form-chat-mesa').trigger('reset');
             },

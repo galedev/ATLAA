@@ -18,11 +18,11 @@ if (isset($_POST['cmmsg']))
         $sql->execute();
         if($sql->rowCount()>0)
         {
-            return true;
+            return 1;
         }
         else
         {
-            return false;
+            return 0;
         }
     }
     else
