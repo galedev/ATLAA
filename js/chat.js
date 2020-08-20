@@ -54,16 +54,10 @@ $('#form-chat-mesa').submit(function(event){
         return false;
     }
     
-    if (conn.readyState == 2 || conn.readyState == 3){
-        console.log('Desconectado do chat');
-        conectar();
-    }else if (conn.readyState == 0){
-        console.log('Conectando ao chat');
-    }else if (conn.readyState == 1){
-        console.log('Conectado ao chat')
+    if (conn.readyState == 1){
         conn.send(dados);
         $('#form-chat-mesa').trigger('reset');
     }else{
-        console.log('Deu Pau no seu chat carai')
+        console.log('Deu Pau no seu chat ai!')
     }
 });
