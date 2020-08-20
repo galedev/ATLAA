@@ -19,7 +19,6 @@ class Chat implements MessageComponentInterface {
     public function onMessage(ConnectionInterface $from, $msg) {
         // $numRecv = count($this->clients) - 1;
         // echo "Connection {$from->resourceId} sending message {$msg} to {$numRecv} connection";
-
         foreach ($this->clients as $client) {
             // if ($from !== $client) {
             //     // The sender is not the receiver, send to each client connected
