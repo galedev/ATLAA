@@ -41,11 +41,12 @@
                                             </div>
                                             <div class="row d-flex align-items-end mt-3">
                                                 <div class="col-8 border border-primary">
-                                                    <form action="chat.php" method="post" id="form-chat-mesa">
+                                                    <form action="msgmesa.php" method="post" id="form-chat-mesa">
                                                         <div class="form-row">
                                                             <div class="col-11 text-center">
                                                                 <textarea type="text" name="cmmsg" id="cmmsg" class="form-control text-light chat" placeholder="Mensagem..."></textarea>
                                                                 <textarea type="text" name="cmnickname" id="cmnickname" class="d-none"><?php echo $cmnickname ?></textarea>
+                                                                <textarea type="text" name="cmidsala" id="cmidsala" class="d-none"><?php echo $room_info[2] ?></textarea>
                                                             </div>
                                                             <div class="col-1 d-flex align-items-center">
                                                                 <button class="btn btn-primary" type="submit">Enviar</button>

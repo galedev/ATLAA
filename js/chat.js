@@ -36,7 +36,6 @@ function showMsg (data) {
     }else{
         var str_msg = '<span style="color: green;">'+ data.nome + ': </span>' + data.msg + '</span>';
     }
-
     var p = document.createElement('p');
     p.innerHTML = str_msg;
     chat_content.appendChild(p);
@@ -64,8 +63,18 @@ $('#form-chat-mesa').submit(function(event){
     }
     
     if (conn.readyState == 1){
-        conn.send(dados);
-        $('#form-chat-mesa').trigger('reset');
+        $.ajax({
+            type: $('#form-chat-mesa').attr('method'),
+            url: $('#form-chat-mesa').attr('action'),
+            data: $('#form-chat-mesa').serialize(),
+            success: function(i){
+                conn.send(dados);
+                $('#form-chat-mesa').trigger('reset');
+            },
+            erro: function(){
+                alert('Erro inesperado');
+            }
+        });
     }else{
         console.log('Deu Pau no seu chat ai!')
     }
