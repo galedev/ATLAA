@@ -1,19 +1,17 @@
-<div class="col-12 border border-primary" id="getDiv">
-    <div class="form-control text-light chat chat-mesa">
-        <?php
-            $msg_mesa = $u->getMsgMesa($id_room);
-            if (!empty($msg_mesa[0][0])) {
-                $i = 0;
-                while ($i < count($msg_mesa)) {
-                    // if ($msg_mesa[$i][2] == $room_info[1]){
-                    //     echo '<p><span style="color: red;">'.$msg_mesa[$i][2].': </span>'.$msg_mesa[$i][3].'</span></p>';
-                    // }else{
-                    //     echo '<p><span style="color: green;">'.$msg_mesa[$i][2].': </span>'.$msg_mesa[$i][3].'</span></p>';
-                    // }
-                    echo "<p><span style='color: green;'>".$msg_mesa[$i][2].": </span>".$msg_mesa[$i][3]."</span></p>";
-                    $i++;
-                }
+<div class="form-control text-light chat chat-mesa">
+    <?php
+        $msg_mesa = $u->getMsgMesa($id_room);
+        if (!empty($msg_mesa[0][0])) {
+            $i = 0;
+            while ($i < count($msg_mesa)) {
+                // if ($msg_mesa[$i][2] == $room_info[1]){
+                //     echo '<p><span style="color: red;">'.$msg_mesa[$i][2].': </span>'.$msg_mesa[$i][3].'</span></p>';
+                // }else{
+                //     echo '<p><span style="color: green;">'.$msg_mesa[$i][2].': </span>'.$msg_mesa[$i][3].'</span></p>';
+                // }
+                echo "<p><span style='color: green;'>".$msg_mesa[$i][2].": </span>".$msg_mesa[$i][3]."</span></p>";
+                $i++;
             }
-        ?>
-    </div>
+        }
+    ?>
 </div>
