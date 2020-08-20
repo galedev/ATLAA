@@ -29,8 +29,10 @@ function conectar(){
 function showMsg (data) {
     data = JSON.parse(data);
     var chat_content = document.getElementById('conteudo-chat-mesa');
-    var str_msg = '<p><span style="color: red;">'+ data.nome + ': </span>' + data.msg + '</span></p>';
-    chat_content.appendChild(str_msg);
+    var str_msg = '<span style="color: red;">'+ data.nome + ': </span>' + data.msg + '</span>';
+    var p = document.createElement('p');
+    p.textContent = str_msg;
+    chat_content.appendChild(p);
 };
 
 conectar();
