@@ -1,1 +1,1 @@
-web: chmod u+x socket/* && socket/socket.sh vendor/bin/heroku-php-nginx
+web: chmod u+x socket/* && socket/socket.sh vendor/bin/heroku-php-nginx -C nginx_app.conf

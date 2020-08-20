@@ -1,6 +1,6 @@
 function conectar(){
 
-    var conn = new WebSocket('wss://atlaa.herokuapp.com:80');
+    var conn = new WebSocket('wss://atlaa.herokuapp.com:8888');
 
     conn.onopen = function(e) {
         console.log('Conectado no chat: ', e.target);
