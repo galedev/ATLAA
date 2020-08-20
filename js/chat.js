@@ -41,9 +41,9 @@ function conectar(){
 // };
 
 function showMsg () {
-    var chat_content = document.getElementById('conteudo-chat-mesa');
-    var sh = chat_content.scrollHeight;
-    chat_content.scrollTo(0,sh);
+    // var chat_content = document.getElementById('conteudo-chat-mesa');
+    // var sh = chat_content.scrollHeight;
+    // chat_content.scrollTo(0,sh);
     $("#getDiv").load(' #conteudo-chat-mesa');
 };
 

@@ -25,6 +25,8 @@ div.chat.chat-mesa {
     height: 500px;
     border: none;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 div.chat.chat-geral {
@@ -32,6 +34,8 @@ div.chat.chat-geral {
     height: 500px;
     border: none;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 textarea.chat {
