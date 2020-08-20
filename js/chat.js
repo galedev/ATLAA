@@ -4,8 +4,7 @@ function conectar(){
     conn = new WebSocket('wss://atlaa.herokuapp.com/wss');
 
     conn.onopen = function(e) {
-        console.log('Conectado no chat!');
-        $("#conteudo-chat-mesa").load(' #getDiv');
+        showMsg();
     };
 
     conn.onclose = function(e) {
@@ -15,16 +14,16 @@ function conectar(){
     };
 
     conn.onmessage = function(e) {
-        // showMsg(e.data);
-        $("#conteudo-chat-mesa").load(' #getDiv');
+        showMsg();
+        // showMsgNoDB(e.data);
     };
 
     conn.onerror = function(err) {
-        console.log('erro encontrado no socket, conexão fechada.',err);
+
     };
 };
 
-// function showMsg (data) {
+// function showMsgNoDB (data) {
 //     var how = info_room;
 //     console.log('master = ', how);
 //     data = JSON.parse(data);
@@ -40,6 +39,13 @@ function conectar(){
 //     var sh = chat_content.scrollHeight;
 //     chat_content.scrollTo(0,sh);
 // };
+
+function showMsg () {
+    var chat_content = document.getElementById('conteudo-chat-mesa');
+    var sh = chat_content.scrollHeight;
+    chat_content.scrollTo(0,sh);
+    $("#getDiv").load(' #conteudo-chat-mesa');
+};
 
 conectar();
 
