@@ -10,6 +10,7 @@ if (isset($_POST['cmmsg']))
     $u->conectar($dbname,$host,$dbuser,$dbpass);
     if($u->msgErro == "") //sem erro
     {
+        global $pdo;
         $sql = $pdo->prepare("INSERT INTO msg_mesa (id_sala, nickname, msg) VALUES (:i, :nn, :m)");
         $sql->bindValue(":i", $idsala);
         $sql->bindValue(":nn", $nicknameatual);
