@@ -27,9 +27,15 @@ function conectar(){
 };
 
 function showMsg (data) {
+    var how = '<?php $room_info[1]; ?>'
     data = JSON.parse(data);
     var chat_content = document.getElementById('conteudo-chat-mesa');
-    var str_msg = '<span style="color: red;">'+ data.nome + ': </span>' + data.msg + '</span>';
+    if (data.nome == how){
+        var str_msg = '<span style="color: red;">'+ data.nome + ': </span>' + data.msg + '</span>';
+    }else{
+        var str_msg = '<span style="color: green;">'+ data.nome + ': </span>' + data.msg + '</span>';
+    }
+
     var p = document.createElement('p');
     p.innerHTML = str_msg;
     chat_content.appendChild(p);
