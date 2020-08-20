@@ -1,0 +1,27 @@
+<?php
+    if (!empty($allroom[0][0])) {
+        $i = 0;
+        while ($i < count($allroom)) {
+            echo "<div class='col-auto mb-3'>
+                    <div class='card border border-primary text-dark' style='width: 14rem;'>
+                        <div class='card-header'>
+                            <img class='card-img-top' src='../imgcapa/semimg.png' height='100rem' alt='Imagem de capa da sala'>
+                        </div>
+                        <div class='card-body text-center'>
+                            <h5 class='card-title'>".$allroom[$i][2]."</h5>
+                            <p class='card-text mh-25 desc-lg'>".$allroom[$i][3]."</p>
+                            <p class='card-text'>".$allroom[$i][4]."</p>
+                        </div>
+                        <div class='card-footer text-center'>
+                            <form id='formaddfav".$i."' method='POST' action='../addsalafav.php'>
+                                <a href='#' class='btn btn-primary'>Entrar na sala</a>
+                                <button type='submit' class='btn btn-primary btnaddsalafav'>+</button>
+                                <input class='d-none' type='text' name='idDaSala' value='".$allroom[$i][0]."' readonly>
+                            </form>
+                        </div>
+                    </div>
+                </div>";
+            $i++;
+        }
+    }
+?>

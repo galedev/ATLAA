@@ -1,0 +1,51 @@
+<div class='border-bottom border-primary sticky-top'>
+    <div class='row'>
+        <nav class='navbar navbar-expand navbar-dark bg-dark w-100'>
+            <div class='col-6 d-flex align-items-start'>
+                <ul class='nav nav-pills' role='tablist'>
+                    <li class='nav-item' role='presentation'>
+                        <a class='nav-link btn-sm active' id='pills-home-tab' data-toggle='pill' href='#pills-home' role='tab' aria-controls='pills-home' aria-selected='true'>INICIO</a>
+                    </li>
+                    <li class='nav-item' role='presentation'>
+                        <a class='nav-link btn-sm' id='pills-sobre-tab' data-toggle='pill' href='#pills-sobre' role='tab' aria-controls='pills-sobre' aria-selected='false'>SOBRE</a>
+                    </li>
+                    <li class='nav-item' role='presentation'>
+                        <a class='nav-link btn-sm' id='pills-contato-tab' data-toggle='pill' href='#pills-contato' role='tab' aria-controls='pills-contato' aria-selected='false'>CONTATO</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- perfil navbar -->
+            <div class='col-6 d-flex align-items-center justify-content-end'>
+                <div class="dropdown text-center">
+                    <div style="width: 40px; height: 40px;" type="button" id="dropdownperfil" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <?php echo $img; ?>
+                    </div>
+                    <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="dropdownperfil">
+                        <div class="card-header">
+                            <?php echo $img; ?><br>
+                            <button type="button" class="btn btn-primary btn-sm" style="margin-top: 16px;" data-toggle="modal" data-target="#uploadimgModal">
+                                Alterar
+                            </button>
+                        </div>
+                        <div class="card-body text-dark">
+                            <h6>Conta: <span id="logado-text"><?php if($_SESSION['id_access'] == 1){echo 'Admin';}else{echo 'Free';} ?></span></h6>
+                            <h6>Nickname: <?php echo $_SESSION['nickname'];?></h6>
+                            <h6>Créditos: <span id="showcredit"><?php echo $result;?></span></h6>
+                        </div>
+                        <div class="card-footer text-dark">
+                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <a class="nav-link active" id="v-pills-lobby-tab" data-toggle="pill" href="#v-pills-lobby" role="tab" aria-controls="v-pills-lobby" aria-selected="true">Lobby</a>
+                                <a class="nav-link" id="v-pills-opt-tab" data-toggle="pill" href="#v-pills-opt" role="tab" aria-controls="v-pills-opt" aria-selected="false">Opções</a>
+                                <?php if ($_SESSION['id_access'] == 1){
+                                    echo '<a class="nav-link" id="v-pills-opt-adm-tab" data-toggle="pill" href="#v-pills-opt-adm" role="tab" aria-controls="v-pills-opt-adm" aria-selected="false">Opções Admin</a>';
+                                } ?>
+                                <a class="nav-link" id="v-pills-sair-tab" data-toggle="pill" href="#v-pills-sair" role="tab" aria-controls="v-pills-sair" aria-selected="false">Sair</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim perfil navbar -->
+        </nav>
+    </div>
+</div>

@@ -1,0 +1,345 @@
+<div class="tab-content justify-content-center">
+    <!-- Home -->
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <div class="row">
+            <div class="col-2 pl-4 pt-5">
+                <div class="card card-custom-grey mt-5">
+                    <div class="card-body">
+                        <p>NPC 1</p>
+                    </div>
+                </div>
+                <div class="card card-custom-grey mt-2">
+                    <div class="card-body">
+                        <p>NPC 2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="card card-custom shadow-lg mt-1 text-light h-100">
+                    <div class="card-body">
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <!-- PLAY -->
+                            <div class="tab-pane fade show active" id="v-pills-lobby" role="tabpanel" aria-labelledby="v-pills-lobby-tab">
+                                <nav class="navbar justify-content-center navbar-dark">
+                                    <ul class="d-flex justify-content-center nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link active" id="pills-chatmesa-tab" data-toggle="pill" href="#pills-chatmesa" role="tab" aria-controls="pills-chatmesa" aria-selected="false">CHAT MESA</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" id="pills-chatgeral-tab" data-toggle="pill" href="#pills-chatgeral" role="tab" aria-controls="pills-chatgeral" aria-selected="false">CHAT GERAL</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div class="tab-content" id="pills-tabContent">
+                                    <!-- Chat MESA -->
+                                    <div class="tab-pane fade show active" id="pills-chatmesa" role="tabpanel" aria-labelledby="pills-chatmesa-tab">
+                                        <div class="container-fluid">
+                                            <div class="row d-flex align-items-start">
+                                                <div class="col-12 border border-primary">
+                                                    <div id="conteudo-chat-mesa" class="form-control text-light chat chat-mesa"></div>
+                                                </div>
+                                            </div>
+                                            <div class="row d-flex align-items-end mt-3">
+                                                <div class="col-8 border border-primary">
+                                                    <form action="chat.php" method="post" id="form-chat-mesa">
+                                                        <div class="form-row">
+                                                            <div class="col-11 text-center">
+                                                                <textarea type="text" name="cmmsg" id="cmmsg" class="form-control text-light chat" placeholder="Mensagem..."></textarea>
+                                                                <textarea type="text" name="cmnickname" id="cmnickname" class="d-none"><?php echo $cmnickname ?></textarea>
+                                                            </div>
+                                                            <div class="col-1 d-flex align-items-center">
+                                                                <button class="btn btn-primary" type="submit">Enviar</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="col-4 col-icon d-flex align-items-center text-center">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Chat GERAL -->
+                                    <div class="tab-pane fade" id="pills-chatgeral" role="tabpanel" aria-labelledby="pills-chatgeral-tab">
+                                        <div class="container-fluid">
+                                            <div class="row d-flex align-items-start">
+                                                <div class="col-12 border border-primary" id="conteudo-chat-geral">
+                                                    <textarea type="text" class="form-control text-light chat chat-geral" readonly placeholder="Nenhuma mensagem ate o momento..."></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="row d-flex align-items-end mt-3">
+                                                <div class="col-8 border border-primary">
+                                                    <form action="chat.php" method="post" id="form-chat-geral">
+                                                        <div class="form-row">
+                                                            <div class="col-11 text-center">
+                                                                <textarea type="text" name="cgmsg" class="form-control text-light chat" placeholder="Mensagem..."></textarea>
+                                                                <textarea type="text" name="cgnickname" class="d-none"><?php echo $cmnickname ?></textarea>
+                                                            </div>
+                                                            <div class="col-1 d-flex align-items-center">
+                                                                <button class="btn btn-primary" type="submit">Enviar</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="col-4 col-icon d-flex align-items-center text-center">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- OPÇÕES -->
+                            <div class="tab-pane fade" id="v-pills-opt" role="tabpanel" aria-labelledby="v-pills-opt-tab">
+                                <nav class="navbar justify-content-center navbar-dark">
+                                    <ul class="d-flex justify-content-center nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link active" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">PERFIL</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="d-flex justify-content-center">
+                                                        <p class="text-center h1">Meu perfil!</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row justify-content-md-center">
+                                                <div class="col-sm-7 text-light">
+                                                    <?php echo $infoUser; ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- OPÇÕES DE ADMIN -->
+                            <div class="tab-pane fade" id="v-pills-opt-adm" role="tabpanel" aria-labelledby="v-pills-opt-adm-tab">
+                                <nav class="navbar justify-content-center navbar-dark">
+                                    <ul class="d-flex justify-content-center nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link active" id="pills-tickets-tab" data-toggle="pill" href="#pills-tickets" role="tab" aria-controls="pills-tickets" aria-selected="true">TICKETS</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" id="pills-profile-adm-tab" data-toggle="pill" href="#pills-profile-adm" role="tab" aria-controls="pills-profile-adm" aria-selected="false">PERFIL</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" id="pills-creditos-tab" data-toggle="pill" href="#pills-creditos" role="tab" aria-controls="pills-creditos" aria-selected="false">CREDITOS</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-tickets" role="tabpanel" aria-labelledby="pills-tickets-tab">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="d-flex justify-content-center">
+                                                        <p class="text-center h3">Lista de tickets!</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="row">
+                                                        <div class="col-sm-3">
+                                                            <h6>ID</h6>
+                                                        </div>
+                                                        
+                                                        <div class="col-sm-3">
+                                                            <h6>NOME</h6>
+                                                        </div>
+                                                        
+                                                        <div class="col-sm-3">
+                                                            <h6>EMAIL</h6>
+                                                        </div>
+                                                        
+                                                        <div class="col-sm-3">
+                                                            <h6>MENSAGEM</h6>
+                                                        </div>
+                                                    </div><hr>
+                                                    <div id="result-tickets"></div><hr>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="button" id="update-ticket" class="btn btn-info">Atualizar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    <!-- <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="d-flex justify-content-center">
+                                                        <p class="text-center h3">Editar perfil!</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row justify-content-md-center">
+                                                <div class="col-sm-6">
+                                                    <form id="form-editar-perfil-other" method="POST" action="../editaperfil.php">
+                                                        <div class="form-group">
+                                                            <label for="nicknameatual">Nickname a ser alterado:</label>
+                                                            <input class="form-control" type="text" name="nicknameatual" id="anicknameatual" placeholder="Nickname atual...">
+                                                        </div><hr>
+    
+                                                        <div class="form-group">
+                                                            <label for="nome">Nome:</label>
+                                                            <input class="form-control" type="text" name="nome" id="anome" placeholder="Novo nome...">
+                                                        </div>
+    
+                                                        <div class="form-group">
+                                                            <label for="nickname">Nickname:</label>
+                                                            <input class="form-control" type="text" name="nickname" id="anickname" placeholder="Novo nickname...">
+                                                        </div>
+                            
+                                                        <div class="form-group">
+                                                            <label for="email">E-mail:</label>
+                                                            <input class="form-control" type="email" name="email" id="aemail" placeholder="Novo e-mail...">
+                                                        </div>
+                            
+                                                        <div class="form-group">
+                                                            <label for="senha">Senha:</label>
+                                                            <input class="form-control" type="password" name="senha" id="asenha" placeholder="Nova senha..."></textarea>
+                                                        </div>
+    
+                                                        <div class="form-group">
+                                                            <label for="idaccess">Acesso:</label>
+                                                            <input class="form-control" type="text" name="idaccess" id="aidaccess" placeholder="1 para admin e 0 para usuario...">
+                                                        </div>
+                            
+                                                        <div class="form-group text-center">
+                                                            <button type="submit" class="btn btn-primary">Enviar</button>
+                                                        </div>
+                            
+                                                        <div class="alert alert-danger d-none">
+                                                            Preencha o campo <span id="a-campo-erro"></span>!
+                                                        </div>
+                                                        <div id="success-edit-perfil" class="d-none"></div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <div class="tab-pane fade" id="pills-profile-adm" role="tabpanel" aria-labelledby="pills-profile-adm-tab">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="d-flex justify-content-center">
+                                                        <p class="text-center h3">Editar perfil!</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row justify-content-md-center">
+                                                <div class="col-sm-6">
+                                                    <form id="form-editar-perfil" method="POST" action="../editaperfil.php">
+                                                        <div class="form-group">
+                                                            <label for="nicknameatual">Nickname a ser alterado:</label>
+                                                            <input class="form-control" type="text" name="nicknameatual" id="anicknameatual" placeholder="Nickname atual...">
+                                                        </div><hr>
+    
+                                                        <div class="form-group">
+                                                            <label for="nome">Nome:</label>
+                                                            <input class="form-control" type="text" name="nome" id="anome" placeholder="Novo nome...">
+                                                        </div>
+    
+                                                        <div class="form-group">
+                                                            <label for="nickname">Nickname:</label>
+                                                            <input class="form-control" type="text" name="nickname" id="anickname" placeholder="Novo nickname...">
+                                                        </div>
+                            
+                                                        <div class="form-group">
+                                                            <label for="email">E-mail:</label>
+                                                            <input class="form-control" type="email" name="email" id="aemail" placeholder="Novo e-mail...">
+                                                        </div>
+                            
+                                                        <div class="form-group">
+                                                            <label for="senha">Senha:</label>
+                                                            <input class="form-control" type="password" name="senha" id="asenha" placeholder="Nova senha..." autocomplete="off"></textarea>
+                                                        </div>
+    
+                                                        <div class="form-group">
+                                                            <label for="idaccess">Acesso:</label>
+                                                            <input class="form-control" type="text" name="idaccess" id="aidaccess" placeholder="1 para admin e 0 para usuario...">
+                                                        </div>
+                            
+                                                        <div class="form-group text-center">
+                                                            <button type="submit" class="btn btn-primary">Enviar</button>
+                                                        </div>
+                            
+                                                        <div class="alert alert-danger d-none">
+                                                            Preencha o campo <span id="a-campo-erro"></span>!
+                                                        </div>
+                                                        <div id="success-edit-perfil" class="d-none"></div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-creditos" role="tabpanel" aria-labelledby="pills-creditos-tab">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="d-flex justify-content-center">
+                                                        <p class="text-center h3">Editar créditos!</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row justify-content-md-center">
+                                                <div class="col-sm-6">
+                                                    <form id="form-editar-creditos" method="POST" action="../editacreditos.php">
+                                                        <div class="form-group">
+                                                            <label for="nicknamec">Nickname a ser creditado:</label>
+                                                            <input class="form-control" type="text" name="nicknamec" id="nicknamec" placeholder="Nickname...">
+                                                        </div>
+    
+                                                        <div class="form-group">
+                                                            <label for="creditos">Créditos:</label>
+                                                            <input class="form-control" type="number" name="creditos" id="creditos">
+                                                        </div>
+    
+                                                        <div class="form-group text-center">
+                                                            <button type="submit" name="adicionar" id="adicionarcredito" class="btn btn-primary" value="adicionar">Adicionar</button>
+                                                            <button type="submit" name="remover" id="removercredito" class="btn btn-primary" value="remover">Remover</button>
+                                                        </div>
+                            
+                                                        <div class="alert-creditos alert alert-danger d-none">
+                                                            Preencha o campo <span id="credito-erro"></span>!
+                                                        </div>
+                                                        <div id="success-edit-credito" class="d-none"></div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- SAIR -->
+                            <div class="tab-pane fade text-center" id="v-pills-sair" role="tabpanel" aria-labelledby="v-pills-sair-tab">
+                                <a class="btn btn-danger" href="../sair.php" role="button">Confirmar logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 pt-5">
+                <div class="mt-5">
+                    <div class="">
+                        <p>Expectador 1</p>
+                        <p>Expectador 2</p>
+                        <p>Expectador 3</p>
+                        <p>Expectador 4</p>
+                        <p>Expectador 5</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,81 @@
+/* .card {
+    box-shadow: 3px 6px 8px 3px rgba(100, 100, 100, 0.3);
+    margin-bottom: 1rem;
+} */
+
+.col-icon {
+    height: 102px;
+}
+
+.card-custom {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.card-custom-grey {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+textarea.form-control {
+    height: 100px;
+    resize: none;
+}
+
+div.chat.chat-mesa {
+    height: 500px;
+    resize: none;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    pointer-events: none;
+}
+
+div.chat.chat-geral {
+    height: 500px;
+    resize: none;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    pointer-events: none;
+}
+
+textarea.chat {
+    height: 100px;
+    resize: none;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+
+textarea.chat:focus {
+    background-color: rgba(255, 255, 255, 0);
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+textarea.chat:read-only {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+form, .alert {
+    margin-bottom: 0;
+}
+.redes {
+    border-radius: 50%;
+    transition: all 0.4s ease-out;
+}
+.redes:hover {
+    cursor: pointer;
+    transform: translateY(-20px);
+}
+
+.desc-lg {
+    height: 8rem;
+    overflow-y: auto;
+}
+
+.card-custom-chat {
+    background-color: rgba(255, 255, 255, 0.08);    
+}
+
+.chat {
+    height: 90%;
+    overflow-y: auto;
+}

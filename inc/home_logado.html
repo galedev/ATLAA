@@ -1,0 +1,348 @@
+<div class="tab-content justify-content-center">
+    <!-- Home -->
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card card-custom shadow-lg mt-3 text-light">
+                        <div class="card-body">
+                            <div class="tab-content" id="v-pills-tabContent">
+                                <!-- LOBBY -->
+                                <div class="tab-pane fade show active" id="v-pills-lobby" role="tabpanel" aria-labelledby="v-pills-lobby-tab">
+                                    <nav class="navbar justify-content-center navbar-dark">
+                                        <ul class="d-flex justify-content-center nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link active" id="pills-salas-tab" data-toggle="pill" href="#pills-salas" role="tab" aria-controls="pills-salas" aria-selected="false">SALAS</a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" id="pills-minhassalas-tab" data-toggle="pill" href="#pills-minhassalas" role="tab" aria-controls="pills-minhassalas" aria-selected="false">MINHAS SALAS</a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" id="pills-favorito-tab" data-toggle="pill" href="#pills-favorito" role="tab" aria-controls="pills-favorito" aria-selected="false">FAVORITOS</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                    <div class="tab-content" id="pills-tabContent">
+                                        <!-- Salas -->
+                                        <div class="tab-pane fade show active" id="pills-salas" role="tabpanel" aria-labelledby="pills-salas-tab">
+                                            <div class="container">
+                                                <div class="row" id="listRoom">
+                                                    <?php include "salas.html";?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Minhas Salas -->
+                                        <div class="tab-pane fade" id="pills-minhassalas" role="tabpanel" aria-labelledby="pills-minhassalas-tab">
+                                            <div class="container">
+                                                <div class="row" id="listMyRoom">
+                                                    <?php include "minhasSalas.html";?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Salas Favoritas -->
+                                        <div class="tab-pane fade" id="pills-favorito" role="tabpanel" aria-labelledby="pills-favorito-tab">
+                                            <div class="container">
+                                                <div class="row" id="favRoom">
+                                                    <?php include "favoritas.html";?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- OPÇÕES -->
+                                <div class="tab-pane fade" id="v-pills-opt" role="tabpanel" aria-labelledby="v-pills-opt-tab">
+                                    <nav class="navbar justify-content-center navbar-dark">
+                                        <ul class="d-flex justify-content-center nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link active" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">PERFIL</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                    <div class="tab-content" id="pills-tabContent">
+                                        <div class="tab-pane fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="d-flex justify-content-center">
+                                                            <p class="text-center h1">Meu perfil!</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-md-center">
+                                                    <div class="col-sm-7 text-light">
+                                                        <?php echo $infoUser; ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- OPÇÕES DE ADMIN -->
+                                <div class="tab-pane fade" id="v-pills-opt-adm" role="tabpanel" aria-labelledby="v-pills-opt-adm-tab">
+                                    <nav class="navbar justify-content-center navbar-dark">
+                                        <ul class="d-flex justify-content-center nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link active" id="pills-tickets-tab" data-toggle="pill" href="#pills-tickets" role="tab" aria-controls="pills-tickets" aria-selected="true">TICKETS</a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" id="pills-profile-adm-tab" data-toggle="pill" href="#pills-profile-adm" role="tab" aria-controls="pills-profile-adm" aria-selected="false">PERFIL</a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" id="pills-creditos-tab" data-toggle="pill" href="#pills-creditos" role="tab" aria-controls="pills-creditos" aria-selected="false">CREDITOS</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                    <div class="tab-content" id="pills-tabContent">
+                                        <div class="tab-pane fade show active" id="pills-tickets" role="tabpanel" aria-labelledby="pills-tickets-tab">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="d-flex justify-content-center">
+                                                            <p class="text-center h3">Lista de tickets!</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="row">
+                                                            <div class="col-sm-3">
+                                                                <h6>ID</h6>
+                                                            </div>
+                                                            
+                                                            <div class="col-sm-3">
+                                                                <h6>NOME</h6>
+                                                            </div>
+                                                            
+                                                            <div class="col-sm-3">
+                                                                <h6>EMAIL</h6>
+                                                            </div>
+                                                            
+                                                            <div class="col-sm-3">
+                                                                <h6>MENSAGEM</h6>
+                                                            </div>
+                                                        </div><hr>
+                                                        <div id="result-tickets"></div><hr>
+                                                        <div class="d-flex justify-content-center">
+                                                            <button type="button" id="update-ticket" class="btn btn-info">Atualizar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        <!-- <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="d-flex justify-content-center">
+                                                            <p class="text-center h3">Editar perfil!</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row justify-content-md-center">
+                                                    <div class="col-sm-6">
+                                                        <form id="form-editar-perfil-other" method="POST" action="../editaperfil.php">
+                                                            <div class="form-group">
+                                                                <label for="nicknameatual">Nickname a ser alterado:</label>
+                                                                <input class="form-control" type="text" name="nicknameatual" id="anicknameatual" placeholder="Nickname atual...">
+                                                            </div><hr>
+        
+                                                            <div class="form-group">
+                                                                <label for="nome">Nome:</label>
+                                                                <input class="form-control" type="text" name="nome" id="anome" placeholder="Novo nome...">
+                                                            </div>
+        
+                                                            <div class="form-group">
+                                                                <label for="nickname">Nickname:</label>
+                                                                <input class="form-control" type="text" name="nickname" id="anickname" placeholder="Novo nickname...">
+                                                            </div>
+                                
+                                                            <div class="form-group">
+                                                                <label for="email">E-mail:</label>
+                                                                <input class="form-control" type="email" name="email" id="aemail" placeholder="Novo e-mail...">
+                                                            </div>
+                                
+                                                            <div class="form-group">
+                                                                <label for="senha">Senha:</label>
+                                                                <input class="form-control" type="password" name="senha" id="asenha" placeholder="Nova senha..."></textarea>
+                                                            </div>
+        
+                                                            <div class="form-group">
+                                                                <label for="idaccess">Acesso:</label>
+                                                                <input class="form-control" type="text" name="idaccess" id="aidaccess" placeholder="1 para admin e 0 para usuario...">
+                                                            </div>
+                                
+                                                            <div class="form-group text-center">
+                                                                <button type="submit" class="btn btn-primary">Enviar</button>
+                                                            </div>
+                                
+                                                            <div class="alert alert-danger d-none">
+                                                                Preencha o campo <span id="a-campo-erro"></span>!
+                                                            </div>
+                                                            <div id="success-edit-perfil" class="d-none"></div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                        <div class="tab-pane fade" id="pills-profile-adm" role="tabpanel" aria-labelledby="pills-profile-adm-tab">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="d-flex justify-content-center">
+                                                            <p class="text-center h3">Editar perfil!</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row justify-content-md-center">
+                                                    <div class="col-sm-6">
+                                                        <form id="form-editar-perfil" method="POST" action="../editaperfil.php">
+                                                            <div class="form-group">
+                                                                <label for="nicknameatual">Nickname a ser alterado:</label>
+                                                                <input class="form-control" type="text" name="nicknameatual" id="anicknameatual" placeholder="Nickname atual...">
+                                                            </div><hr>
+        
+                                                            <div class="form-group">
+                                                                <label for="nome">Nome:</label>
+                                                                <input class="form-control" type="text" name="nome" id="anome" placeholder="Novo nome...">
+                                                            </div>
+        
+                                                            <div class="form-group">
+                                                                <label for="nickname">Nickname:</label>
+                                                                <input class="form-control" type="text" name="nickname" id="anickname" placeholder="Novo nickname...">
+                                                            </div>
+                                
+                                                            <div class="form-group">
+                                                                <label for="email">E-mail:</label>
+                                                                <input class="form-control" type="email" name="email" id="aemail" placeholder="Novo e-mail...">
+                                                            </div>
+                                
+                                                            <div class="form-group">
+                                                                <label for="senha">Senha:</label>
+                                                                <input class="form-control" type="password" name="senha" id="asenha" placeholder="Nova senha..." autocomplete="off"></textarea>
+                                                            </div>
+        
+                                                            <div class="form-group">
+                                                                <label for="idaccess">Acesso:</label>
+                                                                <input class="form-control" type="text" name="idaccess" id="aidaccess" placeholder="1 para admin e 0 para usuario...">
+                                                            </div>
+                                
+                                                            <div class="form-group text-center">
+                                                                <button type="submit" class="btn btn-primary">Enviar</button>
+                                                            </div>
+                                
+                                                            <div class="alert alert-danger d-none">
+                                                                Preencha o campo <span id="a-campo-erro"></span>!
+                                                            </div>
+                                                            <div id="success-edit-perfil" class="d-none"></div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="pills-creditos" role="tabpanel" aria-labelledby="pills-creditos-tab">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="d-flex justify-content-center">
+                                                            <p class="text-center h3">Editar créditos!</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row justify-content-md-center">
+                                                    <div class="col-sm-6">
+                                                        <form id="form-editar-creditos" method="POST" action="../editacreditos.php">
+                                                            <div class="form-group">
+                                                                <label for="nicknamec">Nickname a ser creditado:</label>
+                                                                <input class="form-control" type="text" name="nicknamec" id="nicknamec" placeholder="Nickname...">
+                                                            </div>
+        
+                                                            <div class="form-group">
+                                                                <label for="creditos">Créditos:</label>
+                                                                <input class="form-control" type="number" name="creditos" id="creditos">
+                                                            </div>
+        
+                                                            <div class="form-group text-center">
+                                                                <button type="submit" name="adicionar" id="adicionarcredito" class="btn btn-primary" value="adicionar">Adicionar</button>
+                                                                <button type="submit" name="remover" id="removercredito" class="btn btn-primary" value="remover">Remover</button>
+                                                            </div>
+                                
+                                                            <div class="alert-creditos alert alert-danger d-none">
+                                                                Preencha o campo <span id="credito-erro"></span>!
+                                                            </div>
+                                                            <div id="success-edit-credito" class="d-none"></div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- SAIR -->
+                                <div class="tab-pane fade text-center" id="v-pills-sair" role="tabpanel" aria-labelledby="v-pills-sair-tab">
+                                    <a class="btn btn-danger" href="../sair.php" role="button">Confirmar logout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sobre -->
+    <div class="tab-pane fade" id="pills-sobre" role="tabpanel" aria-labelledby="pills-sobre-tab">
+        <div class="container d-flex align-items-center h-75">
+            <div class="row justify-content-md-center">
+                <div class="col-10">
+                    <p class="text-center h4">Descrição do sistema</p>
+                    <p class="text-center mt-3"> A sigla RPG significa "Role Playing Game" que em portugues seria algo como "Jogo de interpretação de papéis". É um jogo aonde cada pessoa monta seu personagem dentro de um sistema pré definido e interpreta ele no mundo criado pelo narrador. O "mundo" aonde se passa o jogo pode ser qualquer lugar, dimensão, ou cenario (Velho oeste, Cyberpunk, Medieval, Fantasia, Super heróis, etc.). O RPG é um jogo interpretativo, aonde você assume as ações do seu personagem, e por ser um jogo falado, ou escrito, as possibilidades são infinitas.
+                    </p>
+                    <p class="text-center mt-2"> A plataforma GALE de RPG busca ser intuitiva e facil de usar, tornando-se assim agradavel. Buscamos deixar tudo o mais pratico possivel para facilitar tanto a vida do mestre como a do jogador. Cada usuário pode criar suas próprias salas de aventura, com o sistema e quantidade de jogadores que bem entender.
+                        Implementamos um formato no qual o dono da sala pode explicar e mostrar o sistema que está usando para criar suas aventuras, pois através de NPC's poderá interagir no chat, criando uma sensação maior de imersão e tornando a aventura muito mais divertida.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contato -->
+    <div class="tab-pane fade" id="pills-contato" role="tabpanel" aria-labelledby="pills-contato-tab">
+        <div class="container d-flex align-items-center justify-content-md-center h-75">
+            <div class="row border border-primary">
+                <div class="col">
+                    <p class="text-center h4">Contato</p>
+                </div>
+                <div class="w-100"></div>
+                <div class="col">
+                    <form action="contato.php" method="POST" id="form-contato">
+                        <div class="form-group">
+                            <label for="nome">Nome:</label>
+                            <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite seu nome...">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="email">E-mail:</label>
+                            <input class="form-control" type="email" name="email" id="email" placeholder="Digite seu e-mail...">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem:</label>
+                            <textarea class="form-control" name="mensagem" id="mensagem" placeholder="Digite a mensagem..."></textarea>
+                        </div>
+    
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
+    
+                        <div class="alert-contato alert alert-danger d-none">
+                            Preencha o campo <span id="campo-erro"></span>!
+                        </div>
+                        <div id="success-contato" class="d-none"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

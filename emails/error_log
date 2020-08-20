@@ -1,0 +1,8 @@
+[05-Aug-2020 23:26:46 UTC] PHP Warning:  require(vendor/autoload.php): failed to open stream: No such file or directory in /home/qr0zmlmw/public_html/rpg/emails/reenviaremailconf.php on line 6
+[05-Aug-2020 23:26:46 UTC] PHP Fatal error:  require(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/qr0zmlmw/public_html/rpg/emails/reenviaremailconf.php on line 6
+[05-Aug-2020 23:42:33 UTC] PHP Warning:  require_once(CLASSES/usuarios.php): failed to open stream: No such file or directory in /home/qr0zmlmw/public_html/rpg/emails/confiramarcadastro.php on line 2
+[05-Aug-2020 23:42:33 UTC] PHP Fatal error:  require_once(): Failed opening required 'CLASSES/usuarios.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/qr0zmlmw/public_html/rpg/emails/confiramarcadastro.php on line 2
+[05-Aug-2020 23:49:33 UTC] PHP Warning:  require_once(CLASSES/usuarios.php): failed to open stream: No such file or directory in /home/qr0zmlmw/public_html/rpg/emails/confiramarcadastro.php on line 2
+[05-Aug-2020 23:49:33 UTC] PHP Fatal error:  require_once(): Failed opening required 'CLASSES/usuarios.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/qr0zmlmw/public_html/rpg/emails/confiramarcadastro.php on line 2
+[05-Aug-2020 23:59:17 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/qr0zmlmw/public_html/rpg/emails/confiramarcadastro.php on line 26
+[06-Aug-2020 00:00:13 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/qr0zmlmw/public_html/rpg/emails/confiramarcadastro.php on line 26

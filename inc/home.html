@@ -1,0 +1,95 @@
+<div class="tab-content d-flex justify-content-center align-items-center h-100" id="pills-tabContent">
+    <!-- home -->
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-auto text-center ">
+                    <img src="../icon/logo_gif.gif" class='img-fluid' width='200' height='200' alt="RPG">
+                </div>
+                <div class="col-auto d-flex align-items-end">
+                    <blockquote class="blockquote">
+                        <p class="mb-0 text-primary h1">ATLAA</p>
+                        <footer class="blockquote-footer">Plataforma ATLAA de RPG de mesa!</footer>
+                    </blockquote>                      
+                </div>
+            </div>
+            <div class="row justify-content-md-center mt-5">
+                <div class="col-6">
+                    <p class="text-center">Olá aventureiro! Bem vindo a plataforma ATLAA de RPG de mesa online. Esperamos que você mate dragões, destrua robôs, salve alguém em perigo de um prédio em chamas e até mesmo roube o coração da pessoa que você ama. Aqui você terá a oportunidade de viver aventuras infinitas, aonde acontecem as coisas mais loucas e interessantes. Jogue sem moderação!</p>
+                </div>
+            </div>
+            <div class="row justify-content-md-center mt-3">
+                <div class="col-auto">
+                    <img class="rounded-circle border bg-light redes" src="../icon/fb.png" alt="Facebook" width='40' height='40'>
+                </div>
+                <div class="col-auto">
+                    <img class="rounded-circle border bg-light redes" src="../icon/inst.png" alt="Instagram" width='40' height='40'>
+                </div>
+                <div class="col-auto">
+                    <img class="rounded-circle border bg-light redes" src="../icon/email.png" alt="Email" width='40' height='40'>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sobre -->
+    <div class="tab-pane fade mb-3" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="justify-content-center">
+                        <p class="text-center h4 ">Descrição do sistema</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-sm-10 mt-3">
+                    <p class="text-center mt-3"> A sigla RPG significa "Role Playing Game" que em portugues seria algo como "Jogo de interpretação de papéis". É um jogo aonde cada pessoa monta seu personagem dentro de um sistema pré definido e interpreta ele no mundo criado pelo narrador. O "mundo" aonde se passa o jogo pode ser qualquer lugar, dimensão, ou cenario (Velho oeste, Cyberpunk, Medieval, Fantasia, Super heróis, etc.). O RPG é um jogo interpretativo, aonde você assume as ações do seu personagem, e por ser um jogo falado, ou escrito, as possibilidades são infinitas.
+                    </p>
+                </div>
+                <div class="col-sm-10 mt-2">
+                    <p class="text-center"> A plataforma GALE de RPG busca ser intuitiva e facil de usar, tornando-se assim agradavel. Buscamos deixar tudo o mais pratico possivel para facilitar tanto a vida do mestre como a do jogador. Cada usuário pode criar suas próprias salas de aventura, com o sistema e quantidade de jogadores que bem entender.
+                        Implementamos um formato no qual o dono da sala pode explicar e mostrar o sistema que está usando para criar suas aventuras, pois através de NPC's poderá interagir no chat, criando uma sensação maior de imersão e tornando a aventura muito mais divertida.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contato -->
+    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+        <div class="container border border-primary">
+            <div class="row">
+                <div class="col">
+                    <p class="text-center h4">Contato</p>
+                </div>
+                <div class="w-100"></div>
+                <div class="col">
+                    <form action="contato.php" method="POST" id="form-contato">
+                        <div class="form-group">
+                            <label for="nome">Nome:</label>
+                            <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite seu nome...">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="email">E-mail:</label>
+                            <input class="form-control" type="email" name="email" id="email" placeholder="Digite seu e-mail...">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem:</label>
+                            <textarea class="form-control" name="mensagem" id="mensagem" placeholder="Digite a mensagem..."></textarea>
+                        </div>
+    
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
+    
+                        <div class="alert-contato alert alert-danger d-none">
+                            Preencha o campo <span id="campo-erro"></span>!
+                        </div>
+                        <div id="success-contato" class="d-none"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
