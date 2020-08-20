@@ -27,7 +27,7 @@ function conectar(){
 };
 
 function showMsg (data) {
-    var how = '<?php echo $room_info[1]; ?>'
+    var how = info_room;
     console.log('master = ', how);
     data = JSON.parse(data);
     var chat_content = document.getElementById('conteudo-chat-mesa');
