@@ -31,7 +31,7 @@ function showMsg (data) {
     var chat_content = document.getElementById('conteudo-chat-mesa');
     var str_msg = '<span style="color: red;">'+ data.nome + ': </span>' + data.msg + '</span>';
     var p = document.createElement('p');
-    p.textContent = str_msg;
+    p.innerHTML = str_msg;
     chat_content.appendChild(p);
 };
 
