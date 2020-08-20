@@ -10,6 +10,7 @@ function conectar(){
             url: 'getMsgMesa.php',
             success: function(i){
                 console.log(i);
+                $('#conteudo-chat-mesa').html(i);
             },
             erro: function(){
                 alert('Erro inesperado');
