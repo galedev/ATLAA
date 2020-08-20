@@ -33,6 +33,7 @@ function showMsg (data) {
     var p = document.createElement('p');
     p.innerHTML = str_msg;
     chat_content.appendChild(p);
+    chat_content.scrollTo(0,500);
 };
 
 conectar();
