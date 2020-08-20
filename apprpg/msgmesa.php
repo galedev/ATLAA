@@ -13,7 +13,7 @@ if (isset($_POST['cmmsg']))
         global $pdo;
         $sql = $pdo->prepare("INSERT INTO msg_mesa (id_sala, nickname, msg) VALUES (:i, :nn, :m)");
         $sql->bindValue(":i", $idsala);
-        $sql->bindValue(":nn", $nicknameatual);
+        $sql->bindValue(":nn", $nickname);
         $sql->bindValue(":m", $msg);
         $sql->execute();
         if($sql->rowCount()>0)
