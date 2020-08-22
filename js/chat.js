@@ -1,46 +1,13 @@
 
-var conn;
+const conn;
 function conectar(){
 
-    conn = new WebSocket('wss://atlaa.herokuapp.com/wss');
-    const sockets = io('http://192.168.0.102:4000');
+    conn = io('http://192.168.0.102:4000');
 
-    conn.onopen = function(e) {
-        showMsg();
-    };
-
-    conn.onclose = function(e) {
-        setTimeout(function() {
-            conectar();
-          }, 1000);
-    };
-
-    conn.onmessage = function(e) {
-        showMsg();
-        // showMsgNoDB(e.data);
-    };
-
-    conn.onerror = function(err) {
-
-    };
+    conn.on('connect', () => {
+        console.log('Conectado no chat node.js!');
+    });
 };
-
-// function showMsgNoDB (data) {
-//     var how = info_room;
-//     console.log('master = ', how);
-//     data = JSON.parse(data);
-//     var chat_content = document.getElementById('conteudo-chat-mesa');
-//     if (data.nome == how){
-//         var str_msg = '<span style="color: red;">'+ data.nome + ': </span>' + data.msg + '</span>';
-//     }else{
-//         var str_msg = '<span style="color: green;">'+ data.nome + ': </span>' + data.msg + '</span>';
-//     }
-//     var p = document.createElement('p');
-//     p.innerHTML = str_msg;
-//     chat_content.appendChild(p);
-//     var sh = chat_content.scrollHeight;
-//     chat_content.scrollTo(0,sh);
-// };
 
 function showMsg () {
     // var chat_content = document.getElementById('conteudo-chat-mesa');
