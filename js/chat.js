@@ -5,6 +5,18 @@ conn.on('connect', () => {
     console.log('Conectado no chat node.js!');
 });
 
+conn.on('disconnect', () => {
+    console.log('Desconectado no chat!');
+});
+
+conn.on('PlayersRefresh', (players) => {
+    console.log(players);
+});
+
+conn.on('ReceiveMessage', (receivedMessage) => {
+    console.log(receivedMessage);
+});
+
 function showMsg () {
     // var chat_content = document.getElementById('conteudo-chat-mesa');
     // var sh = chat_content.scrollHeight;
