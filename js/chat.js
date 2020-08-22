@@ -1,8 +1,13 @@
 
 const conn = io('http://192.168.0.102:4000');
 
+conn.emit('ninckname', () => {
+    $('#cmnickname').val();
+});
+
 conn.on('connect', () => {
     console.log('Conectado no chat node.js!');
+    conn.emit('ninckname', $('#cmnickname').val());
 });
 
 conn.on('disconnect', () => {
