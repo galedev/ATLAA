@@ -1,14 +1,14 @@
 
 const conn = io('http://192.168.0.102:4000');
-const user = $('#cmnickname').val();
+const nickname = $('#cmnickname').val();
 
 conn.on('connect', () => {
-    console.log(user, ' conectado no chat node.js!');
-    conn.emit('ninckname', user);
+    console.log(nickname, ' conectado no chat node.js!');
+    conn.emit('ninckname', nickname);
 });
 
 conn.on('disconnect', () => {
-    console.log(user, ' desconectado no chat!');
+    console.log(nickname, ' desconectado no chat!');
 });
 
 conn.on('PlayersRefresh', (players) => {
@@ -33,6 +33,7 @@ function showMsg () {
 $('#form-chat-mesa').submit(function(event){
     event.preventDefault();
     var msg = $('#cmmsg');
+    var user = $('#cmnickname');
     var dados = {'nome': user.val(), 'msg': msg.val()};
     dados = JSON.stringify(dados);
 
