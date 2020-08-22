@@ -1,4 +1,4 @@
-import io from './socket.io';
+var io = requere('./socket.io');
 var conn;
 function conectar(){
 
