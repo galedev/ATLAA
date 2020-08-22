@@ -1,7 +1,9 @@
+import io from './socket.io';
 var conn;
 function conectar(){
 
     conn = new WebSocket('wss://atlaa.herokuapp.com/wss');
+    const sockets = io('http://192.168.0.102:4000');
 
     conn.onopen = function(e) {
         showMsg();

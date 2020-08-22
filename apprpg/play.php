@@ -36,6 +36,7 @@ $_SESSION['id_sala_atual'] = $id_room;
     <script src="../js/jquery-3.5.1.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
     <script src="../js/form.js"></script>
+    <script src="../js/socket.io.js"></script>
     <script>var info_room = "<?php echo $room_info[1]; ?>"</script>
     <script src="../js/chat.js"></script>
 </body>
