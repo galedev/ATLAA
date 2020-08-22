@@ -1,13 +1,9 @@
 
-const conn;
-function conectar(){
+const conn = io('http://192.168.0.102:4000');
 
-    conn = io('http://192.168.0.102:4000');
-
-    conn.on('connect', () => {
-        console.log('Conectado no chat node.js!');
-    });
-};
+conn.on('connect', () => {
+    console.log('Conectado no chat node.js!');
+});
 
 function showMsg () {
     // var chat_content = document.getElementById('conteudo-chat-mesa');
@@ -15,8 +11,6 @@ function showMsg () {
     // chat_content.scrollTo(0,sh);
     $("#getDiv").load(' #conteudo-chat-mesa');
 };
-
-conectar();
 
 $('#form-chat-mesa').submit(function(event){
     event.preventDefault();
