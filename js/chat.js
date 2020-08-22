@@ -47,21 +47,17 @@ $('#form-chat-mesa').submit(function(event){
         return false;
     }
     
-    if (conn.readyState == 1){
-        $.ajax({
-            type: $('#form-chat-mesa').attr('method'),
-            url: $('#form-chat-mesa').attr('action'),
-            data: $('#form-chat-mesa').serialize(),
-            success: function(i){
-                console.log(i);
-                conn.emit('SendMessage', msg);
-                $('#form-chat-mesa').trigger('reset');
-            },
-            erro: function(){
-                alert('Erro inesperado');
-            }
-        });
-    }else{
-        console.log('Deu Pau no seu chat ai!')
-    }
+    $.ajax({
+        type: $('#form-chat-mesa').attr('method'),
+        url: $('#form-chat-mesa').attr('action'),
+        data: $('#form-chat-mesa').serialize(),
+        success: function(i){
+            console.log(i);
+            conn.emit('SendMessage', msg);
+            $('#form-chat-mesa').trigger('reset');
+        },
+        erro: function(){
+            alert('Erro inesperado');
+        }
+    });
 });
