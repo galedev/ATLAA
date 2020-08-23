@@ -16,11 +16,7 @@ conn.on('PlayersRefresh', (players) => {
 });
 
 conn.on('ReceiveMessage', (receivedMessage) => {
-    
-});
-
-conn.on('ReceiveMessage', (msg) => {
-    console.log(msg.data);
+    console.log(receivedMessage);
 });
 
 function showMsg () {
@@ -52,7 +48,6 @@ $('#form-chat-mesa').submit(function(event){
         url: $('#form-chat-mesa').attr('action'),
         data: $('#form-chat-mesa').serialize(),
         success: function(i){
-            console.log(i);
             conn.emit('SendMessage', msg);
             $('#form-chat-mesa').trigger('reset');
         },
