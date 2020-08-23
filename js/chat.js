@@ -13,11 +13,9 @@ conn.on('disconnect', () => {
 
 conn.on('PlayersRefresh', (players) => {
     listaPlayers = Object.keys(players).map((key) => (players[key].name));
-    console.log(listaPlayers);
-    
-    listaPlayers.forEach(element => {
-        $('#lista-players').append(`<div class="card card-custom-grey mb-2"><div class="card-body"><p>${element}</p></div></div>`)
-        console.log(element);
+    $('#lista-players').html('');
+    listaPlayers.forEach(name => {
+        $('#lista-players').append(`<div class="card card-custom-grey mb-2"><div class="card-body"><p>${name}</p></div></div>`);
     });
 });
 
