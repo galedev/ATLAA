@@ -81,3 +81,7 @@ form, .alert {
     height: 90%;
     overflow-y: auto;
 }
+
+.lista-esquerda {
+    height: 50%;
+}
