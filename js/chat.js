@@ -20,7 +20,7 @@ conn.on('ReceiveMessage', (receivedMessage) => {
 });
 
 conn.on('ReceiveMessage', (msg) => {
-    console.log(msg.join('\n'));
+    console.log(msg.data);
 });
 
 function showMsg () {
