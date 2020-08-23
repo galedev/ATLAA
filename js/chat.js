@@ -25,6 +25,7 @@ function showMsg () {
     // var sh = chat_content.scrollHeight;
     // chat_content.scrollTo(0,sh);
     $("#getDiv").load(' #conteudo-chat-mesa');
+    console.log('Conteudo do chat atualizado!');
 };
 
 $('#form-chat-mesa').submit(function(event){
