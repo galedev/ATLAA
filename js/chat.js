@@ -2,6 +2,11 @@
 const conn = io('http://192.168.0.102:4000');
 const nickname = $('#cmnickname').val();
 
+const showMsg = () => {
+    $("#getDiv").load(' #conteudo-chat-mesa');
+    console.log('Conteudo do chat atualizado!');
+};
+
 conn.on('connect', () => {
     console.log(nickname, ' conectado no chat node.js!');
     conn.emit('ninckname', nickname);
@@ -20,13 +25,11 @@ conn.on('ReceiveMessage', (receivedMessage) => {
     showMsg();
 });
 
-function showMsg () {
-    // var chat_content = document.getElementById('conteudo-chat-mesa');
-    // var sh = chat_content.scrollHeight;
-    // chat_content.scrollTo(0,sh);
-    $("#getDiv").load(' #conteudo-chat-mesa');
-    console.log('Conteudo do chat atualizado!');
-};
+// function showMsg () {
+//     // var chat_content = document.getElementById('conteudo-chat-mesa');
+//     // var sh = chat_content.scrollHeight;
+//     // chat_content.scrollTo(0,sh);
+// };
 
 $('#form-chat-mesa').submit(function(event){
     event.preventDefault();
