@@ -17,6 +17,7 @@ conn.on('PlayersRefresh', (players) => {
 
 conn.on('ReceiveMessage', (receivedMessage) => {
     console.log(receivedMessage);
+    showMsg();
 });
 
 function showMsg () {
