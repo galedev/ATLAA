@@ -37,7 +37,7 @@ div.chat.chat-mesa::-webkit-scrollbar {
 div.chat.chat-mesa::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: rgba(255,0,0,0.8); 
+    background-color: #3FBF04;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
