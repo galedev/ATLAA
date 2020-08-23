@@ -12,7 +12,8 @@ conn.on('disconnect', () => {
 });
 
 conn.on('PlayersRefresh', (players) => {
-    $('#lista-players').html(`<div class="card card-custom-grey mb-2"><div class="card-body"><p>${Object.keys(players).map((key) => (players[key].name))}</p></div></div>`);
+    console.log(Object.keys(players).map((key) => (players[key].name)))
+    Object.keys(players).map((key) => ($('#lista-players').html(`<div class="card card-custom-grey mb-2"><div class="card-body"><p>${players[key].name}</p></div></div>`)));
 });
 
 conn.on('ReceiveMessage', (receivedMessage) => {
