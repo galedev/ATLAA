@@ -12,7 +12,7 @@ conn.on('disconnect', () => {
 });
 
 conn.on('PlayersRefresh', (players) => {
-    $('#lista-players').append(`<div class="card card-custom-grey mb-2"><div class="card-body"><p>${Object.keys(players).map((key) => (players[key].name));}</p></div></div>`);
+    $('#lista-players').append(`<div class="card card-custom-grey mb-2"><div class="card-body"><p>${Object.keys(players).map((key) => (players[key].name))}</p></div></div>`);
 });
 
 conn.on('ReceiveMessage', (receivedMessage) => {
