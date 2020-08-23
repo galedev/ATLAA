@@ -16,16 +16,8 @@ conn.on('PlayersRefresh', (players) => {
 });
 
 conn.on('ReceiveMessage', (receivedMessage) => {
-    console.log(receivedMessage);
     $("#getDiv").load(' #conteudo-chat-mesa');
-    console.log('Conteudo do chat atualizado!');
 });
-
-// function showMsg () {
-//     // var chat_content = document.getElementById('conteudo-chat-mesa');
-//     // var sh = chat_content.scrollHeight;
-//     // chat_content.scrollTo(0,sh);
-// };
 
 $('#form-chat-mesa').submit(function(event){
     event.preventDefault();
