@@ -1,5 +1,5 @@
 
-const conn = io('http://192.168.0.102:4000');
+const conn = io('https://atlaajs.herokuapp.com/');
 const nickname = $('#cmnickname').val();
 
 conn.on('connect', () => {
