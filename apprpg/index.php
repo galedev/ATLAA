@@ -19,7 +19,7 @@ $infoUser = $u->getInfoUser($_SESSION['nickname']);
 $myroom = $u->getMyRoom($_SESSION['nickname']);
 $allroom = $u->getAllRoom();
 $favroom = $u->getFavRoom($_SESSION['nickname']);
-$img = "<img src='../imgperfil/".$imgName."' style='border-radius: 50%; border: 3px solid white;' class='img-fluid' alt='Img de Perfil'>";
+$img = "<img src='../imgperfil/".$imgName."' style='border-radius: 50%; border: 3px solid white;' class='img' alt='Img de Perfil' width='40px' height='40px'>";
 ?>
 <html lang="pt-br">
 <head><meta charset="utf-8">

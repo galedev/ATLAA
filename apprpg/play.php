@@ -12,7 +12,7 @@ $u->conectar($dbname,$host,$dbuser,$dbpass);
 $result = $u->qtdeCreditos($_SESSION['nickname']);
 $imgName = $u->imgPerfil($_SESSION['nickname']);
 $infoUser = $u->getInfoUser($_SESSION['nickname']);
-$img = "<img src='../imgperfil/".$imgName."' style='border-radius: 50%; border: 3px solid white;' class='img-fluid' alt='Img de Perfil'>";
+$img = "<img src='../imgperfil/".$imgName."' style='border-radius: 50%; border: 3px solid white;' class='img' alt='Img de Perfil' width='40px' height='40px'>";
 $cmnickname = $_SESSION['nickname'];
 $id_room = $_GET['id'];
 $room_info = $u->getRoomInfo($id_room);
