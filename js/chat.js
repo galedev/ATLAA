@@ -57,9 +57,15 @@ $('#form-chat-mesa').submit(function(event){
 $('#btnJogarDados').on('click', function(event){
     event.preventDefault();
 
+    let msg = $('#cmmsg');
+
     const qtdDados = $('#qtdDados').val();
 
     const qtdLados = $('#qtdLados').val();
+
+    if ( qtdDados == '' && qtdLados == '') {
+        alert('nenhum dos compos podem ser vazios.');
+    }
 
     const resultado = () => {
 
@@ -69,16 +75,16 @@ $('#btnJogarDados').on('click', function(event){
             retorno += Math.floor(Math.random() * qtdLados);
         }
         return retorno;
-    }
+    };
 
-    $('#cmmsg').val() = `Rolou ${qtdDados} de ${qtdLados} e obteve ${resultado()}`;
+    msg.val(`Rolou ${qtdDados} de ${qtdLados} e obteve ${resultado()}`);
 
     $.ajax({
         type: $('#form-chat-mesa').attr('method'),
         url: $('#form-chat-mesa').attr('action'),
         data: $('#form-chat-mesa').serialize(),
         success: function(i){
-            conn.emit('SendMessage', $('#cmmsg').val());
+            conn.emit('SendMessage', msg.val(`Rolou ${qtdDados} de ${qtdLados} e obteve ${resultado()}`));
             $('#form-chat-mesa').trigger('reset');
         },
         erro: function(){

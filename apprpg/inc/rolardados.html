@@ -1,4 +1,4 @@
-<div class="modal fade" id="rolardados" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade text-dark" id="rolardados" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -8,8 +8,10 @@
           </button>
         </div>
         <div class="modal-body">
-            <input type="number" name="qtdDados" id="qtdDados" maxlength="3">
-            <input type="number" name="qtdLados" id="qtdLados" maxlength="3">
+            <label for="qtdDados">Numero de Dados: </label>
+            <input type="number" name="qtdDados" id="qtdDados" maxlength="3" min="1" max="999" required>
+            <label for="qtdLados">Numero de Lados: </label>
+            <input type="number" name="qtdLados" id="qtdLados" maxlength="3" min="6" max="999" required>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
