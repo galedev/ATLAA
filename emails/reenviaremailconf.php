@@ -20,7 +20,7 @@ if (isset($_POST['remail']) && !empty($_POST['remail']))
             <body>
                 <table align='center'>
                     <h3>Esse e-mail foi enviado para que você faça a ativação de seu cadastro, se você não solicitou, favor desconsiderar esse e-mail!</h3>
-                    <a href='https://rpg.gale.net.br/emails/confiramarcadastro.php?email=".$email."&status=1' target='_blank' rel='noopener noreferrer'>Confirmar cadastro</a>
+                    <a href='https://atlaa.gale.net.br/emails/confiramarcadastro.php?email=".$email."&status=1' target='_blank' rel='noopener noreferrer'>Confirmar cadastro</a>
                 </table>
             </body>
             </html>

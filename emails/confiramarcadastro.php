@@ -17,7 +17,7 @@
                     ?>
                     <script>
                         alert('Cadastro confirmado com sucesso. Faça seu login e divirta-se!');
-                        window.location.href = "https://rpg.gale.net.br/";
+                        window.location.href = "https://atlaa.gale.net.br/";
                     </script>
                     <?php
                 }
@@ -26,7 +26,7 @@
                     ?>
                     <script>
                         alert('Essa conta já foi confirmada. Pode efetuar o login normalmente!');
-                        window.location.href = "https://rpg.gale.net.br/";
+                        window.location.href = "https://atlaa.gale.net.br/";
                     </script>
                     <?php
                 }
