@@ -63,12 +63,13 @@ $('#btnJogarDados').on('click', function(event){
 
     const qtdLados = $('#qtdLados').val();
 
-    if (qtdDados == '' && qtdLados == '') {
+    if (qtdDados == '' || qtdLados == '') {
         alert('nenhum dos compos podem ser vazios.');
+        $('#qtdDados').focus();
         return false;
     }
 
-    if (qtdDados.lenght > 3 && qtdLados.lenght > 3) {
+    if (qtdDados.lenght > 3 || qtdLados.lenght > 3) {
         alert('o valor máximo é de 3 numeros');
         return false;
     }
