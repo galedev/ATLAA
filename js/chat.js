@@ -63,8 +63,14 @@ $('#btnJogarDados').on('click', function(event){
 
     const qtdLados = $('#qtdLados').val();
 
-    if ( qtdDados == '' && qtdLados == '') {
+    if (qtdDados == '' && qtdLados == '') {
         alert('nenhum dos compos podem ser vazios.');
+        return false;
+    }
+
+    if (qtdDados.lenght > 3 && qtdLados.lenght > 3) {
+        alert('o valor máximo é de 3 numeros');
+        return false;
     }
 
     const resultado = () => {
@@ -77,7 +83,7 @@ $('#btnJogarDados').on('click', function(event){
         return retorno;
     };
 
-    msg.val(`Rolou ${qtdDados} de ${qtdLados} e obteve ${resultado()}`);
+    msg.val(`Rolou ${qtdDados} dados de ${qtdLados} lados e obteve ${resultado()}`);
 
     $.ajax({
         type: $('#form-chat-mesa').attr('method'),
