@@ -53,3 +53,37 @@ $('#form-chat-mesa').submit(function(event){
         }
     });
 });
+
+$('#btnJogarDados').on('click', function(event){
+    event.preventDefault();
+
+    const qtdDados = $('#qtdDados').val();
+
+    const qtdLados = $('#qtdLados').val();
+
+    const resultado = () => {
+
+        let retorno = 0;
+
+        for (let i = 0; i < qtdDados; i++) {
+            retorno += Math.floor(Math.random() * qtdLados);
+        }
+        return retorno;
+    }
+
+    $('#cmmsg').val() = `Rolou ${qtdDados} de ${qtdLados} e obteve ${resultado()}`;
+
+    $.ajax({
+        type: $('#form-chat-mesa').attr('method'),
+        url: $('#form-chat-mesa').attr('action'),
+        data: $('#form-chat-mesa').serialize(),
+        success: function(i){
+            conn.emit('SendMessage', $('#cmmsg').val());
+            $('#form-chat-mesa').trigger('reset');
+        },
+        erro: function(){
+            alert('Erro inesperado');
+        }
+    });
+
+});

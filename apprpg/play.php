@@ -32,6 +32,7 @@ $_SESSION['id_sala_atual'] = $id_room;
     <?php include "../inc/footer.html";?>
     <!-- Incluides Modal -->
     <?php include "../inc/uploadimg.html";?>
+    <?php include "inc/rolardados.html";?>
 	<!-- Scripts -->
     <script src="../js/jquery-3.5.1.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
